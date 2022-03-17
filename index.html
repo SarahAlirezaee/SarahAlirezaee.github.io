@@ -158,7 +158,11 @@
                   </div>
                   About Me
                 </h2>
-                <div class="about-fold_inner__2-cQx">
+                <div
+                  id="ntrfix"
+                  style="visibility: hidden"
+                  class="about-fold_inner__2-cQx"
+                >
                   <p class="about-fold_hi__32pK_">Hi! I’m Sarah!</p>
                   <p style="margin-bottom: 16px">
                     I’m a passionate
@@ -853,4 +857,34 @@
       async=""
     ></script>
   </body>
+  <script>
+    function fixIntro() {
+      const fixedText = `<p class="about-fold_hi__32pK_">Hi! I’m Sarah!</p>
+                  <p style="margin-bottom: 16px">
+                    I’m a passionate
+                    <strong style="margin: 0 4px">game UI/UX designer</strong>
+                    who loves both visual design and analyzing and improving
+                    player experience.
+                  </p>
+                  <p>
+                    I was the UI/UX designer of the
+                    <strong style="margin: 0 4px"
+                      >award-winning indie game</strong
+                    >
+                    Linn (see below). Currently, I’m doing a Master’s degree in
+                    game design Aalto University, Finland, where I’ve completed
+                    <strong style="margin: 0 4px"
+                      >multiple student games.</strong
+                    >
+                  </p>
+                  <p>
+                    Full CV
+                    <a target="_blank" href="/sarah_alirezaee_cv.pdf">here</a>!
+                  </p>`;
+      document.getElementById("ntrfix").innerHTML = fixedText;
+      document.getElementById("ntrfix").style.visibility = "unset";
+      console.log("done!");
+    }
+    setTimeout(fixIntro, 1000);
+  </script>
 </html>
